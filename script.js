@@ -1,4 +1,3 @@
-import Person from './person.js';
 
 
 //1. Consumir (fetch) la API de usuarios 

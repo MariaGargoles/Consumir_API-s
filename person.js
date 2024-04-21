@@ -1,9 +1,13 @@
 
 class Person {
-    constructor(firstName, lastName, age) {
+    constructor(id, firstName, lastName) {
+        this._id = id;
         this._firstName = firstName;
         this._lastName = lastName;
-        this._age = age;
+        
+    }
+    get id() {
+        return this._id;
     }
 
     get firstName() {
@@ -14,9 +18,18 @@ class Person {
         return this._lastName;
     }
 
-    get age() {
-        return this._age;
-    }
+    
 }
 
-export default Person;
+class Users extends Person {
+   constructor(email ,phone , birthday, address ){
+    super(id, firstName, lastName);
+    this._email = email;
+    this._phone= phone;
+    this._birthday = birthday;
+    this.address = address;
+
+   }     
+
+}
+
