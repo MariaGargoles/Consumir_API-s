@@ -2,7 +2,9 @@
 
 //1. Consumir (fetch) la API de usuarios 
 //https://fakerapi.it/api/v1/users?_quantity=20&_gender=male 
-import { setupFilterInput } from './module1.js';
+
+import { setupFilterInput } from './filterinput.js';
+import Users from './users.js';
 
 let users = [];
 
@@ -26,10 +28,10 @@ const writeHtml = (users) => {
   root.innerHTML = ""; 
   users.forEach(person => {
     const pElement = document.createElement("p");
-    pElement.innerText = `ID: ${person.id}, Nombre: ${person.firstname}, Apellidos: ${person.lastname}, Email: ${person.email}, Telefono: ${person.phone}, Cumpleaños: ${person.birthday}, Direccion: ${person.address.street}, web ${person.website}, img ${person.image}`;
+    pElement.innerText = `ID: ${person._id}, Nombre: ${person._firstname}, Apellidos: ${person._lastname}, Email: ${person.email}, Telefono: ${person.phone}, Cumpleaños: ${person.birthday}, Direccion: ${person.address.street}, web ${person.website}, img ${person.image}`;
     root.appendChild(pElement);
   });
 };
 
-console.log(users)
+console.log(users);
 

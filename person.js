@@ -4,8 +4,8 @@ class Person {
         this._id = id;
         this._firstName = firstName;
         this._lastName = lastName;
-        
     }
+
     get id() {
         return this._id;
     }
@@ -17,9 +17,6 @@ class Person {
     get lastName() {
         return this._lastName;
     }
-
-    
 }
 
-
-
+export default Person;
