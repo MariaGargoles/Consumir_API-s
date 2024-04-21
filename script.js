@@ -2,7 +2,7 @@
 
 //1. Consumir (fetch) la API de usuarios 
 //https://fakerapi.it/api/v1/users?_quantity=20&_gender=male 
-
+import { setupFilterInput } from './module1.js';
 
 let users = [];
 
@@ -31,5 +31,5 @@ const writeHtml = (users) => {
   });
 };
 
-
+console.log(users)
 

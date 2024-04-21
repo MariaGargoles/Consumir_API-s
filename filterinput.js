@@ -1,9 +1,14 @@
 
+const filterNameInput = document.getElementById("filterName");
+const inputName = document.createElement("input");
 
-const inputFilterName = () => {
-    const filterNameInput = document.getElementById("filterName");
-    filterNameInput.addEventListener("input", (event) => {
-      const filteredUsers = users.filter(user => user.firstname.toLowerCase().includes(event.target.value.toLowerCase()));
-      writeHtml(filteredUsers);
+const setupFilterInput = (userList) => {
+    inputName.addEventListener('change', (event) => {
+        let value = event.target.value;
+        writeHtml(userList.filter(user => user.firstname.includes(value)));
     });
-  };
+
+    filterNameInput.appendChild(inputName);
+};
+
+export { setupFilterInput };
